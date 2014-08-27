@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Carousel</title>
+    <style>
+        html,body{
+            width:100%;
+            height:100%;
+            font: 300 1em 'Helvetica Neue';
+        }
+
+        div#container{
+            width: 2600px;
+            display: inline-block;
+            /*overflow: hidden;*/
+            margin: 0 auto;
+        }
+
+        div#carousel_container{
+            width: 2500px;
+            height: 500px;
+            /*overflow: scroll;*/
+            display: inline;
+        }
+
+        div#larrow{
+            width: 50px;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-right: 10px solid black;
+        }
+
+        div#rarrow{
+            width: 50px;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 10px solid black;
+        }
+        ul#list_holder{
+            width: 500px;
+            list-style-type: none;
+            display: inline;
+            overflow: scroll;
+            margin: 0 auto;
+        }
+
+        li{
+            width: 500px;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        #larrow:hover{
+            cursor: pointer;
+
+        }
+
+        #rarrow:hover{
+
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="larrow"></div>
+    <div id="carousel_container">
+    <ul id="list_holder">
+        <li><img src="imgs/books1.jpg"></li>
+        <li><img src="imgs/books2.jpg"></li>
+        <li><img src="imgs/books3.jpg"></li>
+        <li><img src="imgs/books4.jpg"></li>
+        <li><img src="imgs/books5.jpg"></li>
+    </ul>
+    </div>
+    <div id="rarrow"></div>
+</div>
+</body>
+</html>
