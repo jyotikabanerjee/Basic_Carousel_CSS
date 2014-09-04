@@ -4,78 +4,85 @@
     <meta charset="UTF-8">
     <title>Carousel</title>
     <style>
-        html,body{
-            width:100%;
-            height:100%;
-            font: 300 1em 'Helvetica Neue';
+        body{
+            margin:0;
+            padding: 0;
+        }
+        li{
+            width: 200px;
+            height: 200px;
+            background-color: #eee;
+            float:left;
+           /* border: 1px solid gray;*/
         }
 
-        div#container{
-            width: 2600px;
-            display: inline-block;
-            /*overflow: hidden;*/
-            margin: 0 auto;
+        ul{
+            list-style-type: none;
+            width: 1000px;
+            margin:0;
+            padding:0;
         }
 
-        div#carousel_container{
-            width: 2500px;
-            height: 500px;
-            /*overflow: scroll;*/
-            display: inline;
+        div.arr{
+            width: 20px;
+            height:200px;
+            background-color: #d5d5d5;
+            float: left;
+            /*border: 1px solid gray;*/
+            margin: 0;
+            padding: 0;
+
+        }
+
+        div.arr:hover{
+            cursor: pointer;
         }
 
         div#larrow{
-            width: 50px;
-            border-top: 10px solid transparent;
             border-bottom: 10px solid transparent;
+            border-top: 10px solid transparent;
             border-right: 10px solid black;
+            margin-top: 90px;
+
         }
 
         div#rarrow{
-            width: 50px;
-            border-top: 10px solid transparent;
             border-bottom: 10px solid transparent;
+            border-top: 10px solid transparent;
             border-left: 10px solid black;
-        }
-        ul#list_holder{
-            width: 500px;
-            list-style-type: none;
-            display: inline;
-            overflow: scroll;
-            margin: 0 auto;
+            margin-top: 90px;
+
         }
 
-        li{
-            width: 500px;
+        div.carousal_container{
+            width: 200px;
+            height: 200px;
             overflow: hidden;
-            display: inline-block;
-        }
-
-        #larrow:hover{
-            cursor: pointer;
 
         }
 
-        #rarrow:hover{
-
-            cursor: pointer;
-
+        div.container{
+            width: 250px;
+            height: 200px;
+            margin:0;
+            padding: 0;
+            float: left;
         }
     </style>
 </head>
 <body>
-<div id="container">
-    <div id="larrow"></div>
-    <div id="carousel_container">
-    <ul id="list_holder">
-        <li><img src="imgs/books1.jpg"></li>
-        <li><img src="imgs/books2.jpg"></li>
-        <li><img src="imgs/books3.jpg"></li>
-        <li><img src="imgs/books4.jpg"></li>
-        <li><img src="imgs/books5.jpg"></li>
-    </ul>
-    </div>
-    <div id="rarrow"></div>
+<div class="container">
+ <div class="arr"><div id="larrow"></div></div>
+ <div class="carousal_container">
+ <ul>
+     <li>Slide1</li>
+     <li>Slide2</li>
+     <li>Slide3</li>
+     <li>Slide4</li>
+     <li>Slide5</li>
+ </ul>
+ </div>
+ <div class="arr"><div id="rarrow"></div></div>
 </div>
 </body>
 </html>

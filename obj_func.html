@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+
+        var count=0;
+
+        Car.prototype.incCount = function(){
+                return function(){
+                    return ++count;
+                }
+        };
+
+        Car.prototype.getCount = function (){
+            return function(){
+                return count;
+            }
+        };
+
+
+        function Car(name){
+            var count;
+            Car.prototype.incCount()();
+            this.name = name;
+            //this.count = Car.prototype.getCount();
+
+            this.getCount = function(){
+                return Car.prototype.getCount()();
+            };
+        }
+
+
+        var c1 = new Car('A');
+        console.log(c1.getCount());
+        var c2 = new Car('A');
+        console.log(c2.getCount());
+        var c3 = new Car('A');
+        console.log(c3.getCount());
+        c1.count = 200;
+       console.log(c1.getCount());
+       console.log(c2.getCount());
+       console.log(c3.getCount());
+
+        var obj1 = {
+          prop:1
+        };
+
+       'use strict';
+        var obj2= Object.create(obj1);
+          obj2.prprp = "pppp"
+
+       //console.log(Object.create());
+        var ts = Object.prototype.toString;
+        for(var prop in ts){
+            console.log(prop);
+
+        }
+
+        console.log(Object.getOwnPropertyDescriptor(Object.prototype,'toString'));
+
+        Object.defineProperty(Object.prototype,'toString',{enumerable:true});
+
+
+       for(var prop in Object.prototype){
+           console.log(prop);
+       }
+
+       console.log( Object.keys(Object.prototype));
+       console.log( Object.getOwnPropertyNames(Object.prototype));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
